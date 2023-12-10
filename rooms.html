@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>BookID</title>
+        <meta name="title" content="BookID" />
+
+        <link rel="shortcut icon" href="img/logo.png" type="image/svg+xml" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="css/stylerooms.css" />
+
+        <script src="https://kit.fontawesome.com/6f3e2f204d.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header class="header" data-header>
+            <div class="container">
+                <a href="home.html" class="logo">
+                    <img src="img/logo-white.png" width="74" height="24" alt="BookID home" class="logo-light" />
+
+                    <img src="img/logo-white.png" width="74" height="24" alt="BookID home" class="logo-dark" />
+                </a>
+
+                <nav class="navbar" data-navbar>
+                    <div class="navbar-top">
+                        <a href="home.html" class="logo">
+                            <img src="img/logo.png" width="74" height="24" alt="BookID home" />
+                        </a>
+
+                        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                    </div>
+
+                    <ul class="navbar-list">
+                        <li>
+                            <a href="home.html" class="navbar-link">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="explore.html" class="navbar-link">Explore</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html" class="navbar-link">Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="bookings.html" class="navbar-link">Bookings</a>
+                        </li>
+
+                        <li>
+                            <a href="about.html" class="navbar-link">About</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <img src="" alt="" id="userPhotoNavbar" class="user-pic" onclick="toggleMenu()" />
+
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <a href="profile.html">
+                            <div class="user-info">
+                                <img id="userPhotoNav" src="" alt="" />
+                                <h3 id="userNameNav">Nama User</h3>
+                            </div>
+                        </a>
+                        <hr />
+
+                        <a href="editprofile.html" class="sub-menu-link">
+                            <img src="img/profile.png" />
+                            <p>Edit Profile</p>
+                            <span>></span>
+                        </a>
+
+                        <a href="#" id="logout" class="sub-menu-link">
+                            <img src="img/logout.png" />
+                            <p>Logout</p>
+                            <span>></span>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                    <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+                <div class="overlay" data-nav-toggler data-overlay></div>
+            </div>
+        </header>
+
+        <main>
+            <article>
+                <div class="navigation-header">
+                    <div class="navigation-container">
+                        <div class="navigation-select-btn">
+                            <span class="btn-text">Select Category</span>
+                            <span class="arrow-dwn">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <ul class="navigation-list-items">
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Standard Room</span>
+                            </li>
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Superior Room</span>
+                            </li>
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Deluxe Room</span>
+                            </li>
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Twin Room</span>
+                            </li>
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Single Room</span>
+                            </li>
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Double Room</span>
+                            </li>
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Family Room</span>
+                            </li>
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Junior Suite Room</span>
+                            </li>
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Suite Room</span>
+                            </li>
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Presidential Room</span>
+                            </li>
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Connecting Room</span>
+                            </li>
+                            <li class="navigation-item">
+                                <span class="navigation-checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="navigation-item-text">Accessible Room</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wrapper">
+                        <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
+                        <ul class="tabs-box">
+                            <li class="tab">Highest Rating</li>
+                            <li class="tab">Most Popular</li>
+                            <li class="tab">Cheapest</li>
+                            <li class="tab">Most Expensive</li>
+                        </ul>
+                        <div class="icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="listRooms" class="box-container"></div>
+                    <!-- end div box-container -->
+                    <br /><br />
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <div class="container grid-list">
+                <ul class="footer-list">
+                    <li>
+                        <p class="h4 footer-list-title">More Info</p>
+                    </li>
+
+                    <li>
+                        <address class="footer-text">BookID | Indonesia</address>
+                    </li>
+
+                    <li>
+                        <a href="mailto:bookid@email.com" class="footer-link">bookid@email.com</a>
+                    </li>
+
+                    <li>
+                        <a href="tel:088888888888" class="footer-link">+62 888 8888 8888</a>
+                    </li>
+
+                    <a href="home.html" class="logo">
+                        <img src="img/logo.png" width="74" height="24" style="padding-top: 20px" alt="Logo" />
+                    </a>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h4 footer-list-title">See More</p>
+                    </li>
+
+                    <li>
+                        <a href="home.html" class="footer-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="explore.html" class="footer-link">Explore</a>
+                    </li>
+
+                    <li>
+                        <a href="rooms.html" class="footer-link">Rooms</a>
+                    </li>
+
+                    <li>
+                        <a href="bookings.html" class="footer-link">Bookings</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="footer-link">About</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="./config/config.js"></script>
+        <script src="./js/pageprotection.js"></script>
+        <script src="./js/roomdata.js"></script>
+        <script src="./js/logout.js"></script>
+        <script src="./js/rooms.js"></script>
+        <script src="./js/getme.js"></script>
+        <script src="./js/index.js"></script>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

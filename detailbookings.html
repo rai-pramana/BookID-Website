@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>BookID</title>
+        <meta name="title" content="BookID" />
+
+        <link rel="shortcut icon" href="img/logo.png" type="image/svg+xml" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="css/styledetailbooks.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+        />
+        <script src="https://kit.fontawesome.com/6f3e2f204d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="header" data-header>
+            <div class="container">
+                <a href="home.html" class="logo">
+                    <img src="img/logo-white.png" width="74" height="24" alt="BookID home" class="logo-light" />
+
+                    <img src="img/logo-white.png" width="74" height="24" alt="BookID home" class="logo-dark" />
+                </a>
+
+                <nav class="navbar" data-navbar>
+                    <div class="navbar-top">
+                        <a href="home.html" class="logo">
+                            <img src="img/logo.png" width="74" height="24" alt="BookID home" />
+                        </a>
+
+                        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                    </div>
+
+                    <ul class="navbar-list">
+                        <li>
+                            <a href="home.html" class="navbar-link">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="explore.html" class="navbar-link">Explore</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html" class="navbar-link">Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="bookings.html" class="navbar-link">Bookings</a>
+                        </li>
+
+                        <li>
+                            <a href="about.html" class="navbar-link">About</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <img src="" alt="" id="userPhotoNavbar" class="user-pic" onclick="toggleMenu()" />
+
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <a href="profile.html">
+                            <div class="user-info">
+                                <img id="userPhotoNav" src="" alt="" />
+                                <h3 id="userNameNav">Nama User</h3>
+                            </div>
+                        </a>
+                        <hr />
+
+                        <a href="editprofile.html" class="sub-menu-link">
+                            <img src="img/profile.png" />
+                            <p>Edit Profile</p>
+                            <span>></span>
+                        </a>
+
+                        <a href="#" id="logout" class="sub-menu-link">
+                            <img src="img/logout.png" />
+                            <p>Logout</p>
+                            <span>></span>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                    <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+                <div class="overlay" data-nav-toggler data-overlay></div>
+            </div>
+        </header>
+
+        <main>
+            <article>
+                <div class="container">
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="product-imgs">
+                                <div class="img-display">
+                                    <div class="img-showcase">
+                                        <a id="roomDetailLinkPhoto" href="">
+                                            <img id="roomImageDisplay" src="img/blog-2.jpg" alt="image" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-content">
+                                <a id="roomDetailLinkName" href="">
+                                    <h2 id="roomNameDisplay" class="product-title">...</h2>
+                                </a>
+
+                                <div class="product-detail">
+                                    <ul>
+                                        <li><span id="bookingsDateDisplay">Booking Date: ...</span></li>
+                                        <li><span id="bookingsStatus">Status: ...</span></li>
+                                        <li><span id="currentPriceDisplay">Current Price: Rp...</span></li>
+                                        <li><span id="bookingsDurationDisplay">Booking Duration: ... to ... (... Days)</span></li>
+                                        <li><span id="totalRoomDisplay">Total Rooms: ... Rooms</span></li>
+                                        <li><h4 id="totalPriceDisplay">Total Price: Rp...</h4></li>
+                                    </ul>
+                                </div>
+
+                                <div class="purchase-info">
+                                    <button type="button" class="btn" id="edit"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+                                    <button type="button" class="btn" id="checkout"><i class="fa-solid fa-check"></i> Check Out</button>
+                                    <button type="button" class="btn" id="review"><i class="fa-regular fa-message"></i> Review</button>
+                                    <button id="cancel" class="btn cancel">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer class="footer">
+            <div class="container grid-list">
+                <ul class="footer-list">
+                    <li>
+                        <p class="h4 footer-list-title">More Info</p>
+                    </li>
+
+                    <li>
+                        <address class="footer-text">BookID | Indonesia</address>
+                    </li>
+
+                    <li>
+                        <a href="mailto:bookid@email.com" class="footer-link">bookid@email.com</a>
+                    </li>
+
+                    <li>
+                        <a href="tel:088888888888" class="footer-link">+62 888 8888 8888</a>
+                    </li>
+
+                    <a href="home.html" class="logo">
+                        <img src="img/logo.png" width="74" height="24" style="padding-top: 20px" alt="Logo" />
+                    </a>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h4 footer-list-title">See More</p>
+                    </li>
+
+                    <li>
+                        <a href="home.html" class="footer-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="explore.html" class="footer-link">Explore</a>
+                    </li>
+
+                    <li>
+                        <a href="rooms.html" class="footer-link">Rooms</a>
+                    </li>
+
+                    <li>
+                        <a href="bookings.html" class="footer-link">Bookings</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="footer-link">About</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="./config/config.js"></script>
+        <script src="./js/pageprotection.js"></script>
+        <script src="./js/logout.js"></script>
+        <script src="./js/getme.js"></script>
+        <script src="./js/index.js"></script>
+        <script src="./js/bookingstool.js"></script>
+        <script src="./js/getbooking.js"></script>
+        <script src="./js/detailbookings.js"></script>
+        <script src="./js/cancel.js"></script>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
